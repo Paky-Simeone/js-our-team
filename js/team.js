@@ -30,3 +30,7 @@ const team = [
     image: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+for(let persona in team){
+  console.log(persona, team[persona]);
+  
+}
