@@ -28,9 +28,18 @@ const team = [
     name: 'Barbara Ramos',
     role: 'Graphic Designer',
     image: 'barbara-ramos-graphic-designer.jpg',
-  },
-];
-for(let persona in team){
-  console.log(persona, team[persona]);
-  
+  },];
+const contenitore = document.getElementById('pippo');
+
+for(let persona of team){
+  const cardElement =`
+  <div class="col">
+    <div class="card">
+      <img src="./img/${persona.image}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${persona.name}</h5>
+        <p class="card-text">${persona.role}</p>
+      </div>
+    </div>`
+  contenitore.innerHTML += cardElement;
 }
